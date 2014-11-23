@@ -110,11 +110,11 @@
     return keyCode === codes.SPACE || keyCode === codes.ENTER || keyCode === codes.TAB;
   };
 
-  codes.isSomeF = function() {
-
+  codes.isF1ToF12 = function( keyCode ) {
+      return keyCode >= codes.F1 && keyCode <= codes.F12;
   };
 
-  codes.codeToString = function ( keyCode ){
+  codes.keyCodeToString = function ( keyCode ){
     if( codes.isLetter( keyCode ) || codes.isNumber( keyCode ) )
       return String.fromCharCode( keyCode );
 
