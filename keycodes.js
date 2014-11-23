@@ -1,10 +1,4 @@
-(function (root, factory) {
-  if (typeof exports === 'object')
-    return module.exports = factory;
-
-  root.KeyCodes = factory;
-
-})(this, function (){
+var KeyCodes = (function (){
   var codes = {
     ENTER : 13,
     ESC : 27,
@@ -121,5 +115,10 @@
     return codes.getKeyNameFromKeyCode( keyCode );
   };
 
+
   return codes;
-}());
+})();
+
+if (typeof exports === 'object')
+  module.exports = codes;
+
