@@ -7,16 +7,16 @@ module.exports = function ( grunt ){
     },
     build : {
       src : [
-        'datetostr.js'
+        'keycodes.js'
       ],
-      dest : 'datetostr.min.js'
+      dest : 'keycodes.min.js'
     }
   };
 
 
   options.jasmine = {
     'default' : {
-      src : 'datetostr.js',
+      src : 'keycodes.js',
       options : {
         specs : 'tests/*Spec.js'
       }
