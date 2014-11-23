@@ -80,13 +80,6 @@ var KeyCodes = (function (){
     NINE: 57
   };
 
-  codes.getKeyNameFromKeyCode = function( keyCode ) {
-    for(var key in codes) {
-      if(codes[key] === keyCode) return key;
-    }
-
-    return null;
-  };
 
   codes.isNumber = function(keyCode) {
     return keyCode >= codes.ZERO && keyCode <= codes.NINE;
@@ -113,6 +106,14 @@ var KeyCodes = (function (){
       return String.fromCharCode( keyCode );
 
     return codes.getKeyNameFromKeyCode( keyCode );
+  };
+
+  codes.getKeyNameFromKeyCode = function( keyCode ) {
+    for(var key in codes) {
+      if(codes[key] === keyCode) return key;
+    }
+
+    return null;
   };
 
 
