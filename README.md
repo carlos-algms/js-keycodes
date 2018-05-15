@@ -1,5 +1,10 @@
 js-keycodes
 ===========
+![travis build](https://api.travis-ci.org/js-keycodes.svg?branch=master)
+![Codecov](https://img.shields.io/codecov/c/github/js-keycodes.svg)
+![NPM version](https://img.shields.io/npm/v/js-keycodes.svg)
+![Downloads](https://img.shields.io/npm/dy/js-keycodes.svg)
+![License](https://img.shields.io/npm/l/js-keycodes.svg)
 
 Identify and work with keyCodes on JavaScript
 

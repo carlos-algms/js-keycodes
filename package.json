@@ -13,7 +13,8 @@
   },
   "scripts": {
     "test": "jest --colors --coverage",
-    "test-watch": "npm run test -- --watch"
+    "test-watch": "npm run test -- --watch",
+    "codecov": "codecov"
   },
   "repository": {
     "type": "git",
