@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
+    "module": "commonjs",
     "outDir": "./dist",
     "sourceMap": true,
     "declaration": true,
@@ -12,7 +12,7 @@
     "noUnusedLocals": true,
     "alwaysStrict": true,
     "downlevelIteration": true,
-    "importHelpers": true,
+    "importHelpers": false,
     "noImplicitThis": true,
     "skipLibCheck": true,
     "strictFunctionTypes": true,

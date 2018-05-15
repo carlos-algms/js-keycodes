@@ -2,3 +2,7 @@ tsconfig.json
 *.ts
 .editorconfig
 *.yml
+.vscode
+.gitattributes
+coverage
+tslint.json

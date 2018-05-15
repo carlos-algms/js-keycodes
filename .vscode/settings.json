@@ -1,7 +1,9 @@
 {
   "cSpell.words": [
     "codecov",
-    "keycodes"
+    "keycodes",
+    "postbuild",
+    "prebuild"
   ],
   "prettier.singleQuote": true,
   "prettier.printWidth": 120,
