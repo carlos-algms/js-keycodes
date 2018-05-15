@@ -1,45 +1,51 @@
-var KeyCodes = (function (){
-  var codes = {
-    ENTER : 13,
-    ESC : 27,
+/**
+ * Identify and work with keycodes on javascript
+ */
+export class KeyCodes {
+  /**
+   * All key-codes
+   */
+  readonly codes = {
+    ENTER     : 13,
+    ESC       : 27,
     BACKSPACE : 8,
-    TAB : 9,
-    SHIFT : 16,
-    CTRL : 17,
-    ALT : 18,
-    SPACE : 32,
+    TAB       : 9,
+    SHIFT     : 16,
+    CTRL      : 17,
+    ALT       : 18,
+    SPACE     : 32,
 
-    PAUSE : 19,
-    PAGE_UP : 33,
+    PAUSE     : 19,
+    PAGE_UP   : 33,
     PAGE_DOWN : 34,
-    END : 35,
-    HOME : 36,
+    END       : 35,
+    HOME      : 36,
 
-    LEFT : 37,
-    UP : 38,
-    RIGHT : 39,
-    DOWN : 40,
+    LEFT      : 37,
+    UP        : 38,
+    RIGHT     : 39,
+    DOWN      : 40,
 
-    INSERT : 45,
-    DELETE : 46,
+    INSERT    : 45,
+    DELETE    : 46,
 
-    F1 : 112,
-    F2 : 113,
-    F3 : 114,
-    F4 : 115,
-    F5 : 116,
-    F6 : 117,
-    F7 : 118,
-    F8 : 119,
-    F9 : 120,
-    F10 : 121,
-    F11 : 122,
-    F12 : 123,
+    F1        : 112,
+    F2        : 113,
+    F3        : 114,
+    F4        : 115,
+    F5        : 116,
+    F6        : 117,
+    F7        : 118,
+    F8        : 119,
+    F9        : 120,
+    F10       : 121,
+    F11       : 122,
+    F12       : 123,
 
-    DOT : 190,
-    DOT_NUMPAD : 110,
-    COMA : 188,
-    COMA_NUMPAD : 0,
+    DOT       : 190,
+    DOT_NUMPAD: 110,
+    COMA      : 188,
+    COMA_NUMPAD: 0,
 
     A: 65,
     B: 66,
@@ -68,58 +74,79 @@ var KeyCodes = (function (){
     Y: 89,
     Z: 90,
 
-    ZERO: 48,
-    ONE: 49,
-    TWO: 50,
-    THREE: 51,
-    FOUR: 52,
-    FIVE: 53,
-    SIX: 54,
-    SEVEN: 55,
-    EIGHT: 56,
-    NINE: 57
+    ZERO  : 48,
+    ONE   : 49,
+    TWO   : 50,
+    THREE : 51,
+    FOUR  : 52,
+    FIVE  : 53,
+    SIX   : 54,
+    SEVEN : 55,
+    EIGHT : 56,
+    NINE  : 57,
   };
 
 
-  codes.isNumber = function(keyCode) {
-    return keyCode >= codes.ZERO && keyCode <= codes.NINE;
-  };
+  /**
+   * Return true when the keyCode is a number
+   */
+  readonly isNumber = (keyCode): boolean => (keyCode >= this.codes.ZERO && keyCode <= this.codes.NINE);
 
-  codes.isLetter = function(keyCode) {
-    return (keyCode >= codes.A && keyCode <= codes.Z);
-  };
+  /**
+   * Identifies if the keyCode is a letter from A to Z
+   */
+  readonly isLetter = (keyCode): boolean => (keyCode >= this.codes.A && keyCode <= this.codes.Z);
 
-  codes.isNavigation = function(keyCode) {
-    return keyCode >= codes.LEFT && keyCode <= codes.DOWN;
-  };
+  /**
+   * Identifies if the keyCode is a navigation key, e.g.: UP, RIGHT, DOWN or LEFT
+   */
+  readonly isNavigation = (keyCode): boolean => (keyCode >= this.codes.LEFT && keyCode <= this.codes.DOWN);
 
-  codes.isWhitespace = function(keyCode) {
-    return keyCode === codes.SPACE || keyCode === codes.ENTER || keyCode === codes.TAB;
-  };
+  /**
+   * Returns true when the keyCode is Space, Enter or Tab
+   */
+  readonly isWhitespace = (keyCode): boolean => (
+    keyCode === this.codes.SPACE || keyCode === this.codes.ENTER || keyCode === this.codes.TAB
+  )
 
-  codes.isF1ToF12 = function( keyCode ) {
-      return keyCode >= codes.F1 && keyCode <= codes.F12;
-  };
+  /**
+   * Return true if the keyCode is a F key from F1 to F12
+   */
+  readonly isF1ToF12 = (keyCode): boolean => (keyCode >= this.codes.F1 && keyCode <= this.codes.F12);
 
-  codes.keyCodeToString = function ( keyCode ){
-    if( codes.isLetter( keyCode ) || codes.isNumber( keyCode ) )
-      return String.fromCharCode( keyCode );
-
-    return codes.getKeyNameFromKeyCode( keyCode );
-  };
-
-  codes.getKeyNameFromKeyCode = function( keyCode ) {
-    for(var key in codes) {
-      if(codes[key] === keyCode) return key;
+  /**
+   * Returns a string representation of the keyCode
+   *
+   * @example javascript
+   * KeyCodes.keyCodeToString(90);
+   * -> will return 'Z'
+   * KeyCodes.keyCodeToString(50)
+   * -> will return '2'
+   */
+  readonly keyCodeToString = (keyCode): string => {
+    if (this.isLetter(keyCode) || this.isNumber(keyCode)) {
+      return String.fromCharCode(keyCode);
     }
 
-    return null;
-  };
+    return this.getKeyNameFromKeyCode(keyCode);
+  }
 
-
-  return codes;
-})();
-
-if (typeof exports === 'object')
-  module.exports = codes;
-
+  /**
+   * Returns a string representation based on the programmatic name of the keyCode
+   * @example javascript
+   * KeyCodes.getKeyNameFromKeyCode(90);
+   * -> 'Z'
+   *
+   * KeyCodes.getKeyNameFromKeyCode(50);
+   * -> 'TWO'
+   *
+   * KeyCodes.getKeyNameFromKeyCode(13);
+   * -> 'ENTER'
+   *
+   * KeyCodes.getKeyNameFromKeyCode(121);
+   * -> 'F10'
+   */
+  readonly getKeyNameFromKeyCode = (keyCode): string => (
+    Object.keys(this.codes).find(key => this.codes[key] === keyCode)
+  )
+}

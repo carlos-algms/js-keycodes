@@ -3,5 +3,6 @@
     "@webdev-tools/tslint-airbnb-styleguide"
   ],
   "rules": {
+    "ter-padded-blocks": ["error", { "blocks": "never", "classes": "always", "switches": "never" }]
   }
 }
