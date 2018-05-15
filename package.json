@@ -18,7 +18,7 @@
     "build": "tsc",
     "test": "jest --colors --coverage",
     "test-watch": "jest --colors --watch",
-    "codecov": "codecov"
+    "codecov": "codecov --token=$CODECOV_TOKEN"
   },
   "repository": {
     "type": "git",
@@ -48,7 +48,6 @@
       "jsx",
       "json",
       "node"
-    ],
-    "mapCoverage": true
+    ]
   }
 }
