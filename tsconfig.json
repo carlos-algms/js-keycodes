@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./",
+    "target": "es5",
+    "sourceMap": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "alwaysStrict": true,
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "noImplicitThis": true,
+    "skipLibCheck": true,
+    "strictFunctionTypes": true,
+    "suppressImplicitAnyIndexErrors": true,
+
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2015"
+    ],
+    "baseUrl": "./",
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

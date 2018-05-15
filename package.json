@@ -1,9 +1,34 @@
 {
   "name": "js-keycodes",
+  "version": "1.0.0",
+  "description": "js-keycodes ===========",
+  "main": "keycodes.js",
   "devDependencies": {
+    "@types/node": "^10.0.9",
+    "@webdev-tools/tslint-airbnb-styleguide": "0.0.1",
     "grunt": "~0.4.1",
     "grunt-contrib-jasmine": "^0.8.1",
     "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-uglify": "~0.2.7"
-  }
+    "grunt-contrib-uglify": "~0.2.7",
+    "typescript": "^2.8.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlos-algms/js-keycodes.git"
+  },
+  "keywords": [
+    "key-codes",
+    "keycodes",
+    "js",
+    "JavaScript"
+  ],
+  "author": "Carlos A. Gomes <carlos.algms@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/carlos-algms/js-keycodes/issues"
+  },
+  "homepage": "https://github.com/carlos-algms/js-keycodes#readme"
 }

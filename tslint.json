@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "@webdev-tools/tslint-airbnb-styleguide"
+  ],
+  "rules": {
+  }
+}
