@@ -1,78 +1,88 @@
 js-keycodes
 ===========
 
-Identify and work with keycodes on javascript
+Identify and work with keyCodes on JavaScript
 
-##Install
-You can install it via bower
+# Install
 
 ```shell
-bower install jskeycodes --save
+npm i -S js-keyCodes
 ```
 
-##Basic Usage
+## Usage
 
-####Verify if a keycode is a letter
+First import the lib into your code:
 
-```js
-var myKeyCode = 90;
-if( KeyCodes.isLetter(myKeyCode) ) {
-  //Do stuff if your keycode is a letter
+```javascript
+import * as KeyCodes from 'js-keycodes';
+```
+
+Or individual functions:
+
+```javascript
+import { isLetter, isNumber } from 'js-keycodes';
+```
+
+#### Verify if a keyCode is a letter
+
+```javascript
+const myKeyCode = 90;
+if (KeyCodes.isLetter(myKeyCode)) {
+  // Do stuff if your keyCode is a letter
 }
 ```
 
-####Verify if ENTER is pressed on an event
+#### Verify if ENTER is pressed on an event
 
 ```js
-var myCallback = function(event) {
-  if( event.which === KeyCodes.ENTER ) {
-    //Do your stuff here.
+const handleAnEvent = (event) => {
+  if (event.which === KeyCodes.ENTER) {
+    // Do your stuff here.
   }
 }
 ```
 
 ## Methods
 
-#### KeyCodes.isNumber()
-Return true if the keycode is a number from 0 to 9.
+#### `KeyCodes.isNumber()`
+Return true if the keyCode is a number from 0 to 9.
 
+#### `KeyCodes.isLetter()`
+Return true if the keyCode is a letter from A to Z.
 
-#### KeyCodes.isLetter()
-Return true if the keycode is a letter from A to Z.
+#### `KeyCodes.isNavigation()`
+Return true if the keyCode represents an Arrow key like UP, DOWN, LEFT or RIGHT.
 
-#### KeyCodes.isNavigation()
-Return true if the keycode represents an Arrow key like UP, DOWN, LEFT or RIGHT.
+#### `KeyCodes.isWhitespace()`
+Return true if the keyCode represent ENTER, SPACE or TAB
 
-#### KeyCodes.isWhitespace()
-Return true if the keycode represent ENTER, SPACE or TAB
+#### `KeyCodes.isF1ToF12()`
+Return true if the keyCode represent any of the F buttons from F1 to F12
 
-#### KeyCodes.isF1ToF12()
-Return true if the keycode represent any of the F buttons from F1 to F12
+#### `KeyCodes.keyCodeToString()`
+Return a string representation of the keyCode.
 
-#### KeyCodes.keyCodeToString()
-Return a string representation of the keycode.
+```javascript
+const myLetter = KeyCodes.keyCodeToString(90);
+// -> 'Z'
 
-```js
-var myLetter = KeyCodes.keyCodeToString(90);
-//will return 'Z'
-
-var myNumber = KeyCodes.keyCodeToString(50)
-//will return '2'
+const myNumber = KeyCodes.keyCodeToString(50)
+//  '2'
 ```
 
-#### KeyCodes.getKeyNameFromKeyCode()
-Return a string representation based on the programmatic name of the keycode
-```js
-var myLetter = KeyCodes.getKeyNameFromKeyCode(90);
-//will return 'Z'
+#### `KeyCodes.getKeyNameFromKeyCode()`
+Return a string representation based on the programmatic name of the keyCode
+```javascript
+const myLetter = KeyCodes.getKeyNameFromKeyCode(90);
+// -> 'Z'
 
-var myNumber = KeyCodes.getKeyNameFromKeyCode(50);
-//will return 'TWO'
+const myNumber = KeyCodes.getKeyNameFromKeyCode(50);
+// -> 'TWO'
 
-var myKey = KeyCodes.getKeyNameFromKeyCode(13);
-//will return 'ENTER'
+const myKey = KeyCodes.getKeyNameFromKeyCode(13);
+// -> 'ENTER'
 
-var myF = KeyCodes.getKeyNameFromKeyCode(121);
-//will return 'F10'
+const myF = KeyCodes.getKeyNameFromKeyCode(121);
+// -> 'F10'
 ```
 
