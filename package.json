@@ -2,18 +2,22 @@
   "name": "js-keycodes",
   "version": "1.0.0",
   "description": "js-keycodes ===========",
-  "main": "keycodes.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "devDependencies": {
     "@types/jest": "^22.2.3",
     "@types/node": "^10.0.9",
     "@webdev-tools/tslint-airbnb-styleguide": "0.0.1",
     "jest": "^22.4.3",
+    "rimraf": "^2.6.2",
     "ts-jest": "^22.4.6",
     "typescript": "^2.8.3"
   },
   "scripts": {
+    "prebuild": "rimraf ./dist",
+    "build": "tsc",
     "test": "jest --colors --coverage",
-    "test-watch": "npm run test -- --watch",
+    "test-watch": "jest --colors --watch",
     "codecov": "codecov"
   },
   "repository": {

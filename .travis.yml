@@ -11,8 +11,8 @@ install:
   - npm i --no-save codecov
 
 script:
-  - npm run lib:test
-  - npm run lib:build
+  - npm run test
+  - npm run build
 
 after_success:
   - npm run codecov

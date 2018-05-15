@@ -1,4 +1,4 @@
-import { keyCodeToString, keyCodes } from '../keycodes';
+import { keyCodeToString, keyCodes } from '../src/keycodes';
 
 test('A number', () => {
   expect(keyCodeToString(keyCodes.TWO)).toBe('2');

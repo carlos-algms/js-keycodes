@@ -1,4 +1,4 @@
-import { isF1ToF12, isLetter, isNavigation, isNumber, isWhitespace, keyCodes } from '../keycodes';
+import { isF1ToF12, isLetter, isNavigation, isNumber, isWhitespace, keyCodes } from '../src/keycodes';
 
 test('is Number', () => {
   expect(isNumber(keyCodes.TWO)).toBeTruthy();

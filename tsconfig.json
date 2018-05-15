@@ -1,8 +1,9 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./",
     "target": "es5",
+    "module": "es2015",
+    "outDir": "./dist",
     "sourceMap": true,
     "declaration": true,
     "moduleResolution": "node",
@@ -16,6 +17,7 @@
     "skipLibCheck": true,
     "strictFunctionTypes": true,
     "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
 
     "typeRoots": [
       "node_modules/@types"
@@ -26,6 +28,10 @@
     "baseUrl": "./",
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "src"
+  ],
+  "include": [
+    "index.ts"
   ]
 }

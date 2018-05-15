@@ -1,4 +1,4 @@
-import { getKeyNameFromKeyCode, keyCodes } from '../keycodes';
+import { getKeyNameFromKeyCode, keyCodes } from '../src/keycodes';
 
 test('A number', () => {
   expect(getKeyNameFromKeyCode(keyCodes.SEVEN)).toBe('SEVEN');
