@@ -1,6 +1,6 @@
 {
   "name": "js-keycodes",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Identify and work with keycodes on JavaScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
