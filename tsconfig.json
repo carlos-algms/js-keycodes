@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "es5",
     "module": "commonjs",
     "outDir": "./dist",
@@ -24,14 +25,9 @@
     ],
     "lib": [
       "es2015"
-    ],
-    "baseUrl": "./",
+    ]
   },
   "exclude": [
     "node_modules",
-    "src"
-  ],
-  "include": [
-    "index.ts"
   ]
 }
