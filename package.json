@@ -3,7 +3,6 @@
   "version": "1.0.5",
   "description": "Identify and work with keycodes on JavaScript",
   "main": "dist/keycodes.js",
-  "types": "dist/keycodes.d.ts",
   "devDependencies": {
     "@types/jest": "^24.0.25",
     "@types/node": "~12.12.22",
@@ -14,7 +13,7 @@
   },
   "scripts": {
     "prebuild": "rimraf ./dist",
-    "build": "tsc --declaration --outDir dist/ src/keycodes.ts",
+    "build": "tsc --declaration --outDir dist/",
     "test": "jest --colors --coverage",
     "test-watch": "jest --colors --watch",
     "codecov": "codecov --token=$CODECOV_TOKEN"

@@ -6,6 +6,9 @@ cache:
   directories:
     - "node_modules"
 
+notifications:
+  email: false
+
 install:
   - npm ci
   - npm i --no-save codecov
