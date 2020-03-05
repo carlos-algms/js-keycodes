@@ -1,10 +1,11 @@
 js-keycodes
 ===========
-![travis build](https://api.travis-ci.com/carlos-algms/js-keycodes.svg?branch=master)
-![codecov](https://codecov.io/gh/carlos-algms/js-keycodes/branch/master/graph/badge.svg)
-![NPM version](https://img.shields.io/npm/v/js-keycodes.svg)
-![Downloads](https://img.shields.io/npm/dy/js-keycodes.svg)
-![License](https://img.shields.io/npm/l/js-keycodes.svg)
+[![travis build](https://api.travis-ci.com/carlos-algms/js-keycodes.svg?branch=master)](https://travis-ci.com/carlos-algms/js-keycodes)
+[![codecov](https://codecov.io/gh/carlos-algms/js-keycodes/branch/master/graph/badge.svg)](https://codecov.io/gh/carlos-algms/js-keycodes/branch/master)
+[![NPM version](https://img.shields.io/npm/v/js-keycodes)](https://www.npmjs.com/package/js-keycodes)
+[![Downloads](https://img.shields.io/npm/dy/js-keycodes)](https://www.npmjs.com/package/js-keycodes)
+[![License](https://img.shields.io/npm/l/js-keycodes)](https://tldrlegal.com/license/mit-license)
+
 
 Identify and work with keyCodes on JavaScript
 
