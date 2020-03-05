@@ -1,21 +1,19 @@
 {
   "name": "js-keycodes",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Identify and work with keycodes on JavaScript",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/keycodes.js",
   "devDependencies": {
-    "@types/jest": "^22.2.3",
-    "@types/node": "^10.0.9",
-    "@webdev-tools/tslint-airbnb-styleguide": "0.0.1",
-    "jest": "^22.4.3",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^22.4.6",
-    "typescript": "^2.8.3"
+    "@types/jest": "^24.0.25",
+    "@types/node": "~12.12.22",
+    "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.4"
   },
   "scripts": {
     "prebuild": "rimraf ./dist",
-    "build": "tsc",
+    "build": "tsc --declaration --outDir dist/",
     "test": "jest --colors --coverage",
     "test-watch": "jest --colors --watch",
     "codecov": "codecov --token=$CODECOV_TOKEN"

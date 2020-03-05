@@ -1,8 +1,9 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "es5",
-    "module": "commonjs",
+    "module": "UMD",
     "outDir": "./dist",
     "sourceMap": true,
     "declaration": true,
@@ -24,14 +25,13 @@
     ],
     "lib": [
       "es2015"
-    ],
-    "baseUrl": "./",
+    ]
   },
   "exclude": [
     "node_modules",
-    "src"
+    "**/*.test.ts"
   ],
   "include": [
-    "index.ts"
-  ]
+    "src/**/*"
+  ],
 }

@@ -1,13 +1,16 @@
 language: node_js
 node_js:
-  - "8.11.1"
+  - 12
 
 cache:
   directories:
     - "node_modules"
 
+notifications:
+  email: false
+
 install:
-  - npm install
+  - npm ci
   - npm i --no-save codecov
 
 script:
